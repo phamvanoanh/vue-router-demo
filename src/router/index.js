@@ -5,6 +5,7 @@ import DynamicRouteMatching from "../components/DynamicRouteMatching";
 import NestRoutes from "../components/NestRoutes";
 import SubRouteProfile from "../components/SubRouteProfile";
 import SubRoutePost from "../components/SubRoutePost";
+import ProgrammaticNavigation from "../components/ProgrammaticNavigation";
 
 Vue.use(VueRouter);
 
@@ -39,7 +40,13 @@ const routes = [
             {path: 'profile', component: SubRouteProfile},
             {path: 'post', component: SubRoutePost},
         ]
+    },
+    {
+        // start with '/user-'
+        path: '/register',
+        component: ProgrammaticNavigation
     }
+
 ];
 
 const router = new VueRouter({
