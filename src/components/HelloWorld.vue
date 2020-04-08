@@ -12,16 +12,16 @@
         props: {
             msg: String
         },
-		watch: {
-            $route(to, from) {
-				// to react to route changes, this is a the first method.
-			}
-		},
-		beforeRouteUpdate(to, from , next) {
-            // react to route changes... this is a the second method.
-            next()
-		}
-		// router is earlier defined, the higher priority
+		// watch: {
+        //     // $route(to, from) {
+		// 	// 	// to react to route changes, this is a the first method.
+		// 	// }
+		// },
+		// beforeRouteUpdate(to, from , next) {
+        //     // react to route changes... this is a the second method.
+        //     // next()
+		// }
+		// // router is earlier defined, the higher priority
 
     };
 </script>

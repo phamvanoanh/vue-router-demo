@@ -2,6 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import DynamicRouteMatching from "../components/DynamicRouteMatching";
+import NestRoutes from "../components/NestRoutes";
+import SubRouteProfile from "../components/SubRouteProfile";
+import SubRoutePost from "../components/SubRoutePost";
 
 Vue.use(VueRouter);
 
@@ -22,7 +25,7 @@ const routes = [
     },
     {
         // dynamic segments start with a colon
-        path: "/dynamic/:id",  component: DynamicRouteMatching
+        path: "/dynamic/:id", component: DynamicRouteMatching
     },
     {
         // will match everything
@@ -30,7 +33,12 @@ const routes = [
     },
     {
         // start with '/user-'
-        path: '/user-*'
+        path: '/user',
+        component: NestRoutes,
+        children: [
+            {path: 'profile', component: SubRouteProfile},
+            {path: 'post', component: SubRoutePost},
+        ]
     }
 ];
 
