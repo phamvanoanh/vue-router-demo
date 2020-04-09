@@ -11,11 +11,8 @@
         name: "ProgrammaticNavigation",
 		data() {
             return {
-
 			}
 		},
-
-
     }
 </script>
 

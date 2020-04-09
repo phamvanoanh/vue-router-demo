@@ -6,6 +6,8 @@
 			<router-link to="/about">About</router-link>
 			|
 			<router-link to="/user">NestRoutes</router-link>
+			|
+			<router-link to="/namedView">NamedView</router-link>
 		</div>
       <router-view></router-view>
 	</div>
@@ -13,9 +15,9 @@
 <script>
 
 
+
     export default {
         name: "App",
-
     };
 </script>
 <style lang="scss">

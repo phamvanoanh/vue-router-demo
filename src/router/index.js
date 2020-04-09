@@ -6,6 +6,9 @@ import NestRoutes from "../components/NestRoutes";
 import SubRouteProfile from "../components/SubRouteProfile";
 import SubRoutePost from "../components/SubRoutePost";
 import ProgrammaticNavigation from "../components/ProgrammaticNavigation";
+import SubNamedView1 from "../components/namedView/SubNamedView1";
+import SubNamedView2 from "../components/namedView/SubNamedView2";
+import NamedView from "../components/namedView/NamedView";
 
 Vue.use(VueRouter);
 
@@ -45,8 +48,19 @@ const routes = [
         // start with '/user-'
         path: '/register',
         component: ProgrammaticNavigation
+    },
+    {
+        // start with '/user-'
+        path: '/namedView',
+        component: NamedView
+    },
+    {
+        path: '/sub',
+        components: {
+            default: SubNamedView1,
+            sub2: SubNamedView2
+        }
     }
-
 ];
 
 const router = new VueRouter({
